@@ -24,7 +24,9 @@ echo "DIST = $DIST"
 # ---------------------------------------------------------------- JS (npm)
 echo "==> Packing JS packages"
 mkdir -p "$DIST/npm"
-rm -f "$DIST/npm"/*.tgz
+# Additive: write the current-version tarball (overwrites same version) and
+# LEAVE older-version tarballs in place — apps may still pin an old URL, and the
+# CDN-cached raw URLs must keep resolving. Bump the version to publish anew.
 for p in sdk-react-native sdk-capacitor sdk-node; do
   npm pack "$MONO/packages/$p" --pack-destination "$DIST/npm" >/dev/null
   echo "    packed $p"
