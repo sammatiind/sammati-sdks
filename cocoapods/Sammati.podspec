@@ -3,12 +3,12 @@
 # hosted in this publisher repo (the private monorepo is never exposed).
 Pod::Spec.new do |s|
   s.name             = 'Sammati'
-  s.version          = '0.2.2'
+  s.version          = '0.2.3'
   s.summary          = 'DPDP Act 2023 consent SDK for iOS apps.'
   s.homepage         = 'https://sammati.io'
   s.license          = { :type => 'Apache-2.0' }
   s.author           = { 'Sammati' => 'support@sammati.io' }
-  s.source           = { :http => 'https://raw.githubusercontent.com/sammatiind/sammati-sdks/main/cocoapods/sources/sammati-ios-0.2.2.zip' }
+  s.source           = { :http => 'https://raw.githubusercontent.com/sammatiind/sammati-sdks/main/cocoapods/sources/sammati-ios-0.2.3.zip' }
   s.ios.deployment_target = '14.0'
   s.swift_versions   = ['5.7', '5.8', '5.9', '5.10']
   s.source_files     = 'Sources/Sammati/**/*.swift'
